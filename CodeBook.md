@@ -105,8 +105,8 @@ A warning is returned for the Activity column because it's not numeric. This doe
 
 ##Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-Finaly the desired result, a tidy data table is created with the average of each measurement per activity/subject combination. The new dataset is saved in tidy.csv file.
+Finaly the desired result, a tidy data table is created with the average of each measurement per activity/subject combination. The new dataset is saved in tidy.txt file.
 
 DT <- data.table(bigData)
 tidy<-DT[,lapply(.SD,mean),by="Activity,Subject"]
-write.table(tidy,file="tidy.csv",sep=",",col.names = NA)
+write.table(tidy,file="tidy.txt",sep=",",col.names = NA)
